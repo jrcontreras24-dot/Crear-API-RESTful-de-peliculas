@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
-const sequelize = require('./config/database');
 
-const logger = require('./middlewares/logger');
-const apiKey = require('./middlewares/apiKey');
-
-const peliculasRoutes = require('./routes/peliculas.routes');
+const sequelize = require('./database');
+const logger = require('./logger');
+const apiKey = require('./apiKey');
+const peliculasRoutes = require('./peliculas.routes');
 
 app.use(express.json());
 app.use(logger);
