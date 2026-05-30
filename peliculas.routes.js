@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const service = require('../services/pelicula.service');
+const service = require('./pelicula.service');
 
 router.get('/', async (req, res) => {
   const data = await service.getAll();
