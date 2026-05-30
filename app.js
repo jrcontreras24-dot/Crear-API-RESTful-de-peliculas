@@ -13,9 +13,12 @@ app.use(apiKey);
 
 app.use('/peliculas', peliculasRoutes);
 
+const PORT = process.env.PORT || 3000;
+
 sequelize.sync().then(() => {
   console.log('Base de datos conectada');
-  app.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
+
+  app.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
   });
 });
